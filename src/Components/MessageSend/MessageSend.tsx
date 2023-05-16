@@ -1,4 +1,3 @@
-import { Link, useNavigate } from "react-router-dom";
 import "./MessageSend.scss";
 import { useState } from "react";
 
@@ -8,17 +7,10 @@ interface Message {
 }
 
 const MessageSend = () => {
-  const navigate = useNavigate();
   const [logIn, setLogIn] = useState(false);
   const [allMessage, setAllMessage] = useState<Message[]>([]);
-  const [idInstance, setIdInstance] = useState(
-    ""
-    // "1101820565"
-  );
-  const [apiTokenInstance, setApiTokenInstance] = useState(
-    ""
-    // "ff1b1d87e69d40d2a91f520ed9d2085a6fbc79cc00f4470ead"
-  );
+  const [idInstance, setIdInstance] = useState("");
+  const [apiTokenInstance, setApiTokenInstance] = useState("");
   const handleMessage = async (e: any) => {
     e.preventDefault();
 
@@ -153,7 +145,7 @@ const MessageSend = () => {
             Get Message
           </button>
           <div className="message-block">
-            {allMessage.map((el) => (
+            {allMessage.map((el: Message) => (
               <div className={el.my ? "my-message" : "answer"} key={el.message}>
                 {el.message}
               </div>
