@@ -1,0 +1,63 @@
+$colorGreen: #00a884;
+
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+
+  .no-valid-data {
+    color: red;
+    font-size: 14px;
+    border: 1px solid red;
+    padding: 10px;
+    display: none;
+  }
+
+  .visible-error {
+    display: block;
+  }
+}
+
+.message-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  pad: 50px;
+
+  .my-message {
+    display: flex;
+    background: $colorGreen;
+    padding: 10px;
+  }
+  .answer {
+    display: flex;
+    justify-content: end;
+    background-color: rgb(91, 91, 249);
+    padding: 10px;
+  }
+}
+
+button {
+    border: 2px solid $colorGreen;
+    border-radius: 50px;
+    color: white;
+    background: $colorGreen;
+    cursor: pointer;
+    padding: 5px;
+    min-width: 100px;
+    &:hover {
+        color: gold;
+    }
+}
